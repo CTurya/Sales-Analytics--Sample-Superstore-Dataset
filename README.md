@@ -55,6 +55,45 @@ FROM sales_superstore
 GROUP BY Region
 ORDER BY profit DESC;
 
+Discount impact on profit 
+(USE CATALOG `workspace`;
+
+USE SCHEMA `default`;
+WITH q AS (
+  SELECT
+    Discount,
+    AVG(Profit) AS avg_profit
+  FROM
+    retail.default.sample_superstore
+  GROUP BY
+    Discount
+  ORDER BY
+    Discount)
+SELECT
+  `Discount` `Discount`,
+  `avg_profit` `avg_profit`
+FROM q
+
+Top 10 products 
+USE CATALOG `workspace`;
+USE SCHEMA `default`;
+WITH q AS (
+  SELECT
+    `Sub-Category`,
+    SUM(Sales) AS revenue
+  FROM
+    retail.default.sample_superstore
+  GROUP BY
+    `Sub-Category`
+  ORDER BY
+    revenue DESC
+  LIMIT 10)
+SELECT
+  SUM(`revenue`) `sum(revenue)`,
+  `Sub-Category` `Sub-Category`
+FROM q
+GROUP BY `Sub-Category`
+
 Visualizations
 The project includes:
 Sales by Category
