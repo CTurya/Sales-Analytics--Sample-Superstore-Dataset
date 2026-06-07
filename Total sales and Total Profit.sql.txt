@@ -1,0 +1,96 @@
+﻿-----Total sales and Total Profit
+
+
+WITH aggregates AS (
+ SELECT
+   SUM(Sales) AS total_sales,
+   SUM(Profit) AS total_profit
+ FROM retail.default.sample_superstore
+)
+SELECT
+ ROUND(total_sales, 2) AS total_sales,
+ ROUND(total_profit, 2) AS total_profit
+FROM aggregates;
+
+
+
+
+---Discount Impact
+
+
+SELECT
+ Discount,
+ AVG(Profit) AS avg_profit
+FROM retail.default.sample_superstore
+GROUP BY Discount
+ORDER BY Discount;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---Returns regional breakdown by category (12 rows showing sales/profit/quantity for each region-category combination)
+
+
+SELECT
+ Category,
+ SUM(Sales) AS total_sales
+FROM retail.default.sample_superstore
+GROUP BY Category
+ORDER BY total_sales DESC;
+
+
+SELECT
+ Segment,
+ COUNT(*) AS order_count,
+ SUM(Sales) AS total_sales,
+ SUM(Profit) AS total_profit
+FROM retail.default.sample_superstore
+GROUP BY Segment
+ORDER BY total_sales DESC;
+
+
+SELECT
+ Region,
+ Category,
+ SUM(Sales) AS total_sales,
+ SUM(Profit) AS total_profit,
+ SUM(Quantity) AS total_quantity
+FROM retail.default.sample_superstore
+GROUP BY Region, Category
+ORDER BY total_sales DESC;
+
+
+
+
+--Profit by Region
+
+
+SELECT
+ Region,
+ SUM(Sales) AS sales
+FROM retail.default.sample_superstore
+GROUP BY Region
+ORDER BY sales DESC;
+
+
+
+
+Sales by Category
+SELECT
+   Category,
+   SUM(Sales) AS revenue
+FROM sales_superstore
+GROUP BY Category
+ORDER BY revenue DESC;
