@@ -1,8 +1,10 @@
 Project Overview
+
 This project analyzes retail sales performance using SQL in Databricks. The goal is to uncover business insights related to sales, profitability, product performance, customer segments, shipping methods, and regional trends.
 The analysis demonstrates practical business intelligence skills, including data exploration, KPI development, profitability analysis, and data visualization.
 
 Business Objectives
+
 Identify the most profitable product categories
 Evaluate sales performance across regions
 Understand the impact of discounts on profitability
@@ -10,9 +12,13 @@ Compare customer segments and shipping methods
 Provide actionable recommendations to improve business performance
 
 Tools & Technologies
+
 Databricks
-Spark SQL
+
+SQL
+
 GitHub
+
 Databricks Visualizations
 
 Project Workflow
@@ -57,10 +63,8 @@ ORDER BY profit DESC;
 
 Discount impact on profit 
 (USE CATALOG `workspace`;
-
 USE SCHEMA `default`;
-WITH q AS (
-  SELECT
+WITH q AS (SELECT
     Discount,
     AVG(Profit) AS avg_profit
   FROM
@@ -95,15 +99,21 @@ FROM q
 GROUP BY `Sub-Category`
 
 Visualizations
+
 The project includes:
+Product Performance
+
 Sales by Category
-Profit by Region
-Sales by Customer Segment
-Sales by Shipping Mode
+
+Profit by region
+
+Top 10 Products
+
 Discount vs Profit Analysis
-Top Performing Product Categories
+
 
 Key Insights
+
 Examples of insights that can be derived from this analysis:
 Certain product categories contribute significantly more revenue than others.
 Some regions generate high sales but relatively low profit.
@@ -112,6 +122,7 @@ Customer segments show different purchasing behaviors.
 Shipping preferences vary across customer groups.
 
 Business Recommendations
+
 Based on the findings:
 Focus marketing efforts on high-profit categories.
 Review discount strategies to protect margins.
@@ -121,10 +132,17 @@ Develop targeted strategies for different customer segments.
 
     
 Skills Demonstrated
+
 SQL Query Development
+
 Data Exploration
+
 Business Intelligence
+
 KPI Reporting
+
 Data Visualization
+
 Analytical Thinking
+
 Data Storytelling
