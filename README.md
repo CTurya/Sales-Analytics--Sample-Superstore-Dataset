@@ -14,6 +14,7 @@ Databricks
 Spark SQL
 GitHub
 Databricks Visualizations
+
 Project Workflow
 Data Import
     ↓
@@ -28,7 +29,6 @@ Business Insights
 Visualizations
     ↓
 Recommendations
-
 
 SQL Analysis
 
