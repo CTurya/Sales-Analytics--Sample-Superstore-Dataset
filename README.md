@@ -16,19 +16,20 @@ GitHub
 Databricks Visualizations
 
 Project Workflow
-Data Import
-    ↓
-Data Validation
-    ↓
-Data Cleaning
-    ↓
-Exploratory Analysis
-    ↓
-Business Insights
-    ↓
-Visualizations
-    ↓
-Recommendations
+
+    Data Import
+       ↓
+    Data Validation
+       ↓
+    Data Cleaning
+       ↓
+    Exploratory Analysis
+       ↓
+    Business Insights
+       ↓
+    Visualizations
+       ↓
+    Recommendations
 
 SQL Analysis
 
@@ -79,23 +80,6 @@ Investigate underperforming regions.
 Optimize shipping methods to improve customer experience.
 Develop targeted strategies for different customer segments.
 
-Repository Structure
-retail-sales-analytics/
-│
-├── README.md
-├── data/
-├── sql/
-│   ├── data_validation.sql
-│   ├── exploratory_analysis.sql
-│   └── business_insights.sql
-│
-├── visualizations/
-│   ├── sales_by_category.png
-│   ├── profit_by_region.png
-│   └── discount_analysis.png
-│
-└── docs/
-    └── insights_summary.md
     
 Skills Demonstrated
 SQL Query Development
